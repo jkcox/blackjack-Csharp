@@ -3,14 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 namespace Blackjack
-{
-
-    // suit enum
-    // card number enums
-    // loop over and assign values
-    //randomize card deck
-
-    
+{    
     public enum Suit
     {
         Heart,
@@ -230,13 +223,13 @@ namespace Blackjack
             {
                 // Start game
                 Console.WriteLine("Welcome to Blackjack!");
-                Hand playerHand = new Hand();
-                Hand compHand = new Hand();
                 //shuffle deck
                 var deck = new Deck();
                 deck.Shuffle();
                 //deal cards
                 var dealer = new Dealer();
+                Hand playerHand = new Hand();
+                Hand compHand = new Hand();
                 //player gets cards
                 dealer.Deal(deck, playerHand);
                 int playerScore = playerHand.newHand[0].Value + playerHand.newHand[1].Value;
